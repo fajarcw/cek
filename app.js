@@ -4,6 +4,6 @@ module['exports'] = function cobaBot (hook) {
     .post('https://api.telegram.org/bot' + hook.env.coba_bot_key + '/sendMessage')
     .form({
       "chat_id": hook.params.message.chat.id,
-      "text": "anda mengirim: " + hook.params.message.text
+      "text": "You said: " + hook.params.message.text
     });
 };
